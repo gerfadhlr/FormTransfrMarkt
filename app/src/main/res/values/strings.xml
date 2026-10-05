@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Transfer Market</string>
+
+    <!-- Daftar pemain untuk Spinner -->
+    <string-array name="pemain_array">
+        <item>Erling Haaland (ST)</item>
+        <item>Kylian Mbappé (ST)</item>
+        <item>Vinícius Júnior (LW)</item>
+        <item>Lamine Yamal (RW)</item>
+        <item>Jude Bellingham (CM)</item>
+        <item>Pedri(CM)</item>
+        <item>Rodri (DM)</item>
+        <item>Marc Cucurella (LB)</item>
+        <item>Achraf Hakimi (RB)</item>
+        <item>Pau Cubarsi (CB)</item>
+        <item>Alisson Becker (GK)</item>
+    </string-array>
+
+    <!-- Harga (juta euro), urutannya HARUS sama dengan pemain_array -->
+    <integer-array name="harga_array">
+        <item>180</item>
+        <item>170</item>
+        <item>150</item>
+        <item>140</item>
+        <item>120</item>
+        <item>120</item>
+        <item>110</item>
+        <item>100</item>
+        <item>90</item>
+        <item>40</item>
+        <item>30</item>
+    </integer-array>
+</resources>

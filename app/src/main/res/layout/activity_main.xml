@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fm_bg"
+    android:orientation="vertical">
+
+    <!-- Header bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fm_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- TextView: judul -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:letterSpacing="0.08"
+            android:text="TRANSFER CENTRE"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● Window Open"
+            android:textColor="@color/fm_green"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- PANEL FORM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="DETAIL TRANSFER"
+                android:textColor="@color/fm_accent"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.05"
+                android:text="NAMA KLUB"
+                android:textColor="@color/fm_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- EditText -->
+            <EditText
+                android:id="@+id/etNamaKlub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:hint="Masukkan nama klub Anda"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/fm_text"
+                android:textColorHint="@color/fm_muted"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.05"
+                android:text="PILIH PEMAIN"
+                android:textColor="@color/fm_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- Spinner -->
+            <Spinner
+                android:id="@+id/spPemain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:entries="@array/pemain_array"
+                android:popupBackground="@color/fm_panel"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.05"
+                android:text="JENIS TRANSFER"
+                android:textColor="@color/fm_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- RadioGroup -->
+            <RadioGroup
+                android:id="@+id/rgTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/rbPermanen"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPermanen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/fm_accent"
+                    android:text="Permanen"
+                    android:textColor="@color/fm_text" />
+
+                <RadioButton
+                    android:id="@+id/rbPinjaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/fm_accent"
+                    android:text="Pinjaman"
+                    android:textColor="@color/fm_text" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.05"
+                android:text="KLAUSUL TAMBAHAN"
+                android:textColor="@color/fm_muted"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- CheckBox -->
+                <CheckBox
+                    android:id="@+id/cbBonusGol"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/fm_accent"
+                    android:checked="false"
+                    android:text="Bonus Gol (+€2 jt)"
+                    android:textColor="@color/fm_text"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbAgen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/fm_accent"
+                    android:checked="false"
+                    android:text="Biaya Agen (+€1,5 jt)"
+                    android:textColor="@color/fm_text"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/btnBeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/fm_accent"
+                android:letterSpacing="0.08"
+                android:text="TANDATANGANI KONTRAK"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="6dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:letterSpacing="0.1"
+            android:text="RIWAYAT TRANSFER"
+            android:textColor="@color/fm_accent"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <!-- ListView -->
+        <ListView
+            android:id="@+id/lvRekap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_panel"
+            android:divider="@color/fm_border"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+</LinearLayout>

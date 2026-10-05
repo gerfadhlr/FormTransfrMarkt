@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fm_bg">#10161F</color>
+    <color name="fm_header">#0B3A66</color>
+    <color name="fm_panel">#1A2332</color>
+    <color name="fm_input">#243044</color>
+    <color name="fm_border">#2E3B50</color>
+    <color name="fm_accent">#00A3E0</color>
+    <color name="fm_green">#4CD964</color>
+    <color name="fm_text">#E8EEF5</color>
+    <color name="fm_muted">#8A99AD</color>
+</resources>
