@@ -10,6 +10,10 @@ import android.widget.RadioButton
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +23,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Beri jarak header dari status bar dan list dari navigation bar
+        val root = findViewById<View>(R.id.root)
+        val header = findViewById<View>(R.id.headerBar)
+        val paddingAtasAwal = header.paddingTop
+
+        ViewCompat.setOnApplyWindowInsetsListener(root) { _, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            header.setPadding(
+                header.paddingLeft,
+                paddingAtasAwal + bars.top,
+                header.paddingRight,
+                header.paddingBottom
+            )
+            root.setPadding(0, 0, 0, bars.bottom)
+            insets
+        }
 
         // Hubungkan variabel dengan widget lewat id
         val etNamaKlub = findViewById<EditText>(R.id.etNamaKlub)
